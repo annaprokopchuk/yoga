@@ -7,10 +7,16 @@
           <form action="/action_page.php" class="form">
             <div class="form-title">Trial Class</div>
             <input type="text" placeholder="Enter your name" required="required" class="form-item">
-            <input type="tel" placeholder="Enter your phone" required="required" class="form-item">
-            <input type="text" placeholder="Chose your class" required="required" class="form-item">
+            <input type="tel" placeholder="Enter your phone" pattern="^\d{4}-\d{3}-\d{4}$" required="required" class="form-item">
+            <span><select name="class[]" required class="form-item">
+                <option disabled selected>Chose your class</option>
+                <option >Yoga For Health</option>
+                <option >Yoga For Lose Weight</option>
+                <option >Yoga For Children</option>
+                <option >Yoga For Elderly</option>
+               </select></span>
             <div class="btn-wrap">
-              <a href="#" class="btn">Try it</a>
+              <input type="submit" class="btn" value="Try it">
             </div>          
           </form>
         </div>

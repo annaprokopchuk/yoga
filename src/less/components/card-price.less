@@ -3,16 +3,21 @@
 .price-list {
   margin: -13px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   .list-item {
     width: 33.33%;
     padding: 13px;
+    min-width: 300px;
   }
 }
 .card-price {
   border-radius: 7px;
   box-shadow: 0px 0px 47px -13px rgba(0,0,0,0.75);
+  &.is-hover .card-header {
+    box-shadow: 0px 0px 39px -3px rgba(83,99,219,1);
+  }
   .card-header {
     background-color: @primari-color;
     color: @white-color;
@@ -64,5 +69,20 @@
   }
   .btn:hover .card-header {
     box-shadow: 0px 0px 39px -3px rgba(83,99,219,1);
+  }
+}
+
+@media (max-width: 970px) {
+  .price-list {
+    .list-item {
+      width: 50%;
+    }
+  }
+}
+@media (max-width: 750px) {
+  .price-list {
+    .list-item {
+      width: 80%;
+    }
   }
 }

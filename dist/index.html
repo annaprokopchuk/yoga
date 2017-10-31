@@ -11,36 +11,66 @@
 </head>
 <body>
   <header>
-    <div class="container">
-      <div class="navbar">
-        <ul class="navigation-left">
-          <li class="navigation-item">
-            <a href="#" class="navigation-link">About us</a>
-          </li>
-          <li class="navigation-item">
-            <a href="#" class="navigation-link">Reservation</a>
-          </li>
-          <li class="navigation-item">
-            <a href="#" class="navigation-link">Gallery</a>
-          </li>
-        </ul>
-        <a href="#" class="logo">
-          <img src="images/logo.png" alt="Logo">
-        </a>
-        <ul class="navigation-right">
-          <li class="navigation-item">
-            <a href="#" class="navigation-link">Blog</a>
-          </li>
-          <li class="navigation-item">
-            <a href="#" class="navigation-link">Elements</a>
-          </li>
-          <li class="navigation-item">
-            <a href="#" class="navigation-link">Shop</a>
-          </li>
-        </ul>
+    <div class="navbar-wrap"  id="sticker">
+      <div class="container">
+        <div class="navbar">
+          <a class="navbar-toggler" href="#toggler" data-toggler>
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="24" height="24" viewBox="0 0 24 24">
+            <title>menu</title>
+            <path d="M21 11h-18c-0.55 0-1 0.45-1 1s0.45 1 1 1h18c0.55 0 1-0.45 1-1s-0.45-1-1-1z"/>
+            <path d="M3 7h18c0.55 0 1-0.45 1-1s-0.45-1-1-1h-18c-0.55 0-1 0.45-1 1s0.45 1 1 1z"/>
+            <path d="M21 17h-18c-0.55 0-1 0.45-1 1s0.45 1 1 1h18c0.55 0 1-0.45 1-1s-0.45-1-1-1z"/>
+            </svg>
+          </a>
+          <ul class="navigation-left">
+            <li class="navigation-item is-active">
+              <a href="#adout" class="navigation-link">About us</a>
+            </li>
+            <li class="navigation-item">
+              <a href="#reservation" class="navigation-link">Reservation</a>
+            </li>
+            <li class="navigation-item">
+              <a href="#gallery" class="navigation-link">Gallery</a>
+            </li>
+          </ul>
+          <a href="#" class="logo">
+            <img src="images/logo.png" alt="Logo">
+          </a>
+          <ul class="navigation-right">
+            <li class="navigation-item">
+              <a href="#blog" class="navigation-link">Blog</a>
+            </li>
+            <li class="navigation-item">
+              <a href="#elements" class="navigation-link">Elements</a>
+            </li>
+            <li class="navigation-item">
+              <a href="#shop" class="navigation-link">Shop</a>
+            </li>
+          </ul>
+          <ul class="navbar-collapse" id="toggler">
+            <li class="navigation-item">
+              <a href="#adout" class="navigation-link">About us</a>
+            </li>
+            <li class="navigation-item">
+              <a href="#reservation" class="navigation-link">Reservation</a>
+            </li>
+            <li class="navigation-item">
+              <a href="#gallery" class="navigation-link">Gallery</a>
+            </li>
+            <li class="navigation-item">
+              <a href="#blog" class="navigation-link">Blog</a>
+            </li>
+            <li class="navigation-item">
+              <a href="#elements" class="navigation-link">Elements</a>
+            </li>
+            <li class="navigation-item">
+              <a href="#shop" class="navigation-link">Shop</a>
+            </li>
+          </ul>
+          </div>
+        </div>
       </div>
-    </div>
-  </header>
+    </div>  </header>
   <main>
     <div class="section section-title">
       <div class="background"></div>
@@ -51,10 +81,16 @@
               <form action="/action_page.php" class="form">
                 <div class="form-title">Trial Class</div>
                 <input type="text" placeholder="Enter your name" required="required" class="form-item">
-                <input type="tel" placeholder="Enter your phone" required="required" class="form-item">
-                <input type="text" placeholder="Chose your class" required="required" class="form-item">
+                <input type="tel" placeholder="Enter your phone" pattern="^\d{4}-\d{3}-\d{4}$" required="required" class="form-item">
+                <span><select name="class[]" required class="form-item">
+                    <option disabled selected>Chose your class</option>
+                    <option >Yoga For Health</option>
+                    <option >Yoga For Lose Weight</option>
+                    <option >Yoga For Children</option>
+                    <option >Yoga For Elderly</option>
+                   </select></span>
                 <div class="btn-wrap">
-                  <a href="#" class="btn">Try it</a>
+                  <input type="submit" class="btn" value="Try it">
                 </div>          
               </form>
             </div>
@@ -65,7 +101,7 @@
           </div>
         </div>
       </div>
-    </div>    <div class="section section-program">
+    </div>    <div class="section section-program" id="elements">
       <div class="container">
         <div class="card-title-wrap">
           <div class="section-title-wrap">
@@ -120,7 +156,7 @@
         </ul>
       </div>
     </div>
-    <div class="section section-portfolio">
+    <div class="section section-portfolio" id="gallery">
       <ul class="portfolio-list">
         <li class="portfolio-item"><div class="card-portfolio">
   <div class="card-portfolio-img">
@@ -212,7 +248,7 @@
 </div></li>
       </ul>
     </div>
-    <div class="section section-about">
+    <div class="section section-about" id="about">
       <div class="container">
         <div class="section-about-wrap">
           <div class="tex-wrapper">
@@ -221,28 +257,31 @@
                Ut enim ad minim veniam, quis nostrud exercitation toui ullamcomi laboris nisi ut
                aliquip ex ea commodo consequat. Duis aute irure dolor it in lorei voluptate velit esse cillum dolore eu fugiat nulla pariatur lorem ispum loting sokui.</p>
           </div>
-          <div class="slider">
-            <div class="slider-item">
-              <div class="card-img">
-                <img src="images/img-2.jpg" alt="img">
+          <div class="slider-wrap">
+            <div class="slider">
+              <div class="slider-item">
+                <div class="card-img">
+                  <img src="images/img-2.jpg" alt="img">
+                </div>
               </div>
-            </div>
-            <div class="slider-item">
-              <div class="card-img">
-                <img src="images/img-2.jpg" alt="img">
+              <div class="slider-item">
+                <div class="card-img">
+                  <img src="images/img-2.jpg" alt="img">
+                </div>
               </div>
-            </div>
-            <div class="slider-item">
-              <div class="card-img">
-                <img src="images/img-2.jpg" alt="img">
+              <div class="slider-item">
+                <div class="card-img">
+                  <img src="images/img-2.jpg" alt="img">
+                </div>
               </div>
-            </div>
-            <div class="slider-item">
-              <div class="card-img">
-                <img src="images/img-2.jpg" alt="img">
+              <div class="slider-item">
+                <div class="card-img">
+                  <img src="images/img-2.jpg" alt="img">
+                </div>
               </div>
             </div>
           </div>
+         
         </div>
       </div>
     </div>    <div class="section section-future">
@@ -358,12 +397,12 @@
         </div>
       </div>  
     </div>
-    <div class="section section-price">
+    <div class="section section-price" id="reservation">
       <div class="container">
         <ul class="price-list">
           <li class="list-item"><div class="card-price">
   <div class="card-header">
-    <div class="price">
+    <div class="price" >
       <span>$</span>
       <span class="value">49</span>
       <span>/ month</span>
@@ -375,12 +414,12 @@
       <li class="description-item">NTRY TIME: 8A.M – 8P.M</li>
       <li class="description-item">NUTRITION ADVICER: NO</li>
     </ul>
-    <a href="#" class="btn">Buy now</a>
+    <a href="#" class="btn" data-hover=".card-price">Buy now</a>
   </div>
 </div></li>
           <li class="list-item"><div class="card-price">
   <div class="card-header">
-    <div class="price">
+    <div class="price" >
       <span>$</span>
       <span class="value">49</span>
       <span>/ month</span>
@@ -392,12 +431,12 @@
       <li class="description-item">NTRY TIME: 8A.M – 8P.M</li>
       <li class="description-item">NUTRITION ADVICER: NO</li>
     </ul>
-    <a href="#" class="btn">Buy now</a>
+    <a href="#" class="btn" data-hover=".card-price">Buy now</a>
   </div>
 </div></li>
           <li class="list-item"><div class="card-price">
   <div class="card-header">
-    <div class="price">
+    <div class="price" >
       <span>$</span>
       <span class="value">49</span>
       <span>/ month</span>
@@ -409,7 +448,7 @@
       <li class="description-item">NTRY TIME: 8A.M – 8P.M</li>
       <li class="description-item">NUTRITION ADVICER: NO</li>
     </ul>
-    <a href="#" class="btn">Buy now</a>
+    <a href="#" class="btn" data-hover=".card-price">Buy now</a>
   </div>
 </div></li>
         </ul>
