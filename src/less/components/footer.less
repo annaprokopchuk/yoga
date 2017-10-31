@@ -1,0 +1,128 @@
+@import 'variables.less';
+@import 'type.less';
+.footer {
+  background-color: @primari-color;
+  color: @white-color;
+}
+.footer-wrap {
+  .footer-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+  .footer-list-wrap {
+    padding: 100px 0 70px 0;
+  }
+  .footer-about {
+    min-width: 300px;
+    width: 50%;
+  }
+  .footer-item {
+    padding-right: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .title {
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    font-weight: @font-weith-bold;
+    font-size: @font-size-m;
+  }
+  .sublist-item {
+    padding-bottom: 22px;
+    position: relative;
+  }
+  .item-padding {
+    padding-bottom: 60px;
+  }
+  .footer-contact {
+    .item-before {
+      padding-left: 35px;
+    }
+    .mail::before, .placeholder::before, .phone-call::before, .planet-earth::before {
+      content: "";
+      width: 25px;
+      height: 25px;
+      display: block;
+      background: url(../images/sprites.png);
+      background-position: -49px -69px;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    .mail::before {
+      background-position: 0px -103px;
+    }
+    .phone-call::before{
+      background-position: 47px -102px;
+    }
+    .planet-earth::before {
+      background-position: -25px -127px;
+    }
+  }
+  .social-list {
+    display: flex;
+    align-items: center;
+  }
+  .footer-contact {
+    .title-margin {
+      margin-bottom: 64px;
+    }
+  }
+  .social-item {
+    content: "";
+    display: block;
+    background: url(../images/sprites.png);
+    background-position: 2px -1px;
+    width: 25px;
+    height: 22px;
+    margin: 5px;
+  }
+  .twitter {
+    background-position: -2px -69px;
+  }
+  .facebook {
+    background-position: 3px -35px;
+  }
+  .google-plus {
+    background-position: -43px -1px;
+  }
+  .instagram {
+    background-position: -44px -34px;
+  }
+  .copyright {
+    background: #5363d8;
+    padding: 42px 0;
+    display: flex;
+    justify-content: center;
+    color: #b7bffc;
+    font-size: @font-size-s;
+  }
+}
+
+@media (max-width: 970px) {
+  .footer-wrap {
+    .footer-contact {
+      .title-margin {
+        display: none;
+      }
+    }
+    .footer-item {
+      width: 50%;
+    }
+    .item-padding {
+      padding-bottom: 30px;
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  .footer-wrap {
+    .footer-item {
+      width: 100%;
+      padding-right: 20px;
+    }
+  }
+}
