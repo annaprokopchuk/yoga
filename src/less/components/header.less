@@ -1,0 +1,40 @@
+@import 'variables.less';
+@import 'type.less';
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-family: @font-family-semibold;
+  min-height: 100px;
+  .navigation-left,
+  .navigation-right {
+    display: flex;
+    align-items: center;
+    .navigation-item {
+      padding: 12px;
+      position: relative;
+      
+    }
+  }
+  .navigation-link { 
+    &:hover, &:focus, &:active {
+      color: @primari-color;
+    }
+    &:before {
+      width: 40%;
+      height: 1px;
+      background-color: @primari-color;
+      bottom: 0;
+      left: 30%;
+      display: block;
+      content: "";
+      position: absolute;
+      display: none;
+    }
+  }
+  .navigation-link:hover:before, 
+  .navigation-link:focus:before, 
+  .navigation-link:active:before {
+    display: block;
+  }
+}

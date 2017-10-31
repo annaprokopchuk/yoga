@@ -1,0 +1,67 @@
+@import 'variables.less';
+@import 'type.less';
+.portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.portfolio-item {
+  width: 25%;
+  flex-grow: 1;
+}
+.card-portfolio {
+  position: relative;
+  &-img {
+    line-height: 0;
+    img {
+    width: 100%;
+    }
+  }
+  .card-hover {
+    background-color: rgba(91, 108, 235, 0.8);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+  }
+  .search-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+  }
+  .wrap-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.card-portfolio:hover .card-hover, .card-portfolio:hover .search-wrap {
+  display: flex;
+}
+
+@media (max-width: 970px) {
+  .portfolio-item {
+    width: 33.33%;
+  }
+}
+@media (max-width: 750px) {
+  .portfolio-item {
+    width: 50%;
+  }
+}
+@media (max-width: 540px) {
+  .portfolio-item {
+    width: 100%;
+  }
+}

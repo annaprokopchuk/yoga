@@ -1,0 +1,17 @@
+{
+  "name": "illusion",
+  "description": "",
+  "main": "index.js",
+  "license": "ISC",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "slick-carousel": "slick-slide#^1.8.1"
+  }
+}

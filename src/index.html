@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Yoga</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <script type="text/javascript" src="js/main.js"></script>
+</head>
+<body>
+  <header>
+    {{> header/header}}
+  </header>
+  <main>
+    {{> section-title/section-title}}
+    <div class="section section-program">
+      <div class="container">
+        <div class="card-title-wrap">
+          {{> card/card-title}}
+        </div>
+        <ul class="card-program-wrap">
+          <li class="card-program-item">{{> card/card-program}}</li>
+          <li class="card-program-item">{{> card/card-program}}</li>
+          <li class="card-program-item">{{> card/card-program}}</li>
+          <li class="card-program-item">{{> card/card-program}}</li>
+        </ul>
+      </div>
+    </div>
+    <div class="section section-portfolio">
+      <ul class="portfolio-list">
+        <li class="portfolio-item">{{>card/card-portfolio}}</li>
+        <li class="portfolio-item">{{>card/card-portfolio}}</li>
+        <li class="portfolio-item">{{>card/card-portfolio}}</li>
+        <li class="portfolio-item">{{>card/card-portfolio}}</li>
+        <li class="portfolio-item">{{>card/card-portfolio}}</li>
+        <li class="portfolio-item">{{>card/card-portfolio}}</li>
+        <li class="portfolio-item">{{>card/card-portfolio}}</li>
+        <li class="portfolio-item">{{>card/card-portfolio}}</li>
+      </ul>
+    </div>
+    {{> section-about/section-about}}
+    <div class="section section-future">
+      <div class="background"></div>
+      <div class="section-future-wrap">
+        <div class="container">
+          <ul class="future-list">
+            <li class="list-item">{{> card/card-future}}</li>
+            <li class="list-item">{{> card/card-future}}</li>
+            <li class="list-item">{{> card/card-future}}</li>
+            <li class="list-item">{{> card/card-future}}</li>
+            <li class="list-item">{{> card/card-future}}</li>
+            <li class="list-item">{{> card/card-future}}</li>
+            <li class="list-item">{{> card/card-future}}</li>
+            <li class="list-item">{{> card/card-future}}</li>
+          </ul>
+        </div>
+      </div>  
+    </div>
+    <div class="section section-price">
+      <div class="container">
+        <ul class="price-list">
+          <li class="list-item">{{> card/card-price}}</li>
+          <li class="list-item">{{> card/card-price}}</li>
+          <li class="list-item">{{> card/card-price}}</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+  <footer>
+
+  </footer>
+</body>
+</html>
