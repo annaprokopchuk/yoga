@@ -296,8 +296,8 @@
 
 jQuery(document).ready(function($) {
   $('.slider').slick({
-    nextArrow: '<i class="slick-prev" aria-hidden="true"><img src="../images/arrov-prev.png"></i>',
-    prevArrow: '<i class="slick-next" aria-hidden="true"><img src="../images/arrov-nex.png"></i>',
+    nextArrow: '<i class="slick-prev" aria-hidden="true"><img src="images/arrov-prev.png"></i>',
+    prevArrow: '<i class="slick-next" aria-hidden="true"><img src="images/arrov-nex.png"></i>',
     autoplay: true,
     autoplaySpeed: 2000,
     responsive: [
